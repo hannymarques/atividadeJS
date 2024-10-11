@@ -1,0 +1,13 @@
+function ehPalindromo(palavra) {
+   
+    palavra = palavra.toLowerCase();
+    let tamanho = palavra.length;
+
+    
+    for (let i = 0; i < Math.floor(tamanho / 2); i++) {
+        if (palavra[i] !== palavra[tamanho - 1 - i]) {
+            return 'A palavra não é um palíndromo.';
+        }
+    }
+    return 'A palavra é um palíndromo!';
+}
