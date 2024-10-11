@@ -1,0 +1,29 @@
+let tarefas = [];
+
+
+for (let i = 0; i < 5; i++) {
+    let tarefa = prompt(`Insira a tarefa ${i + 1}:`);
+    tarefas.push(tarefa);
+}
+
+
+console.log("Tarefas:");
+for (let i = 0; i < tarefas.length; i++) {
+    console.log(`${i + 1}: ${tarefas[i]}`);
+}
+
+
+let tarefaConcluida = prompt("Qual tarefa você deseja marcar como 'concluída'? (digite o número da tarefa)");
+
+
+if (tarefaConcluida > 0 && tarefaConcluida <= tarefas.length) {
+    tarefas.splice(tarefaConcluida - 1, 1);
+} else {
+    console.log("Número da tarefa inválido.");
+}
+
+
+console.log("Tarefas atualizadas:");
+for (let i = 0; i < tarefas.length; i++) {
+    console.log(`${i + 1}: ${tarefas[i]}`);
+}
